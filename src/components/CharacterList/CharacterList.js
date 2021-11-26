@@ -3,7 +3,6 @@ import './CharacterList.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import characters from './data'
 
 class CharacterList extends React.Component {
     renderCharacters(){

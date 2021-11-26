@@ -13,7 +13,7 @@ import obi from './images/obi-wan.0.jpg'
 import boba from './images/boba.jpg'
 import maul from './images/darth-maul.jpg'
 
-let characters = [
+let allCharactersData = [
     {   id: 1,
         name:'Luke Skywalker',
         birth_year: '19BBY',
