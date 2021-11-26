@@ -7,11 +7,10 @@ import allCharactersData from '../data'
 class CharacterList extends React.Component {
     constructor(props){
         super(props);
-        this.state = { display: 'block'}       
+        this.state = { display: 'block'}              
         this.removeModal = this.removeModal.bind(this);        
     }
-    removeModal(){
-        setTimeout(() => {
+    removeModal(){        setTimeout(() => {
             this.setState({display: 'none'})
         }, 3000);
     }          
