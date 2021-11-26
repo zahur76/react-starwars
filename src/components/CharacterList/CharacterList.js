@@ -2,11 +2,11 @@ import React from 'react';
 import './CharacterList.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
+import allCharactersData from '../data'
 class CharacterList extends React.Component {
+
     renderCharacters(){
-        return characters.map(element=>{
+        return (this.props.characters).map(element=>{
             return  <Col className="text-center" xs={12} sm={6} md={4} lg={3}>                     
                         <Col><img src={element.image}/></Col>
                         <Col>{element.name}</Col>

@@ -114,4 +114,4 @@ let allCharactersData = [
     }
 ]
 
-export default characters
+export default allCharactersData
