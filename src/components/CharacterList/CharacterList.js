@@ -7,16 +7,24 @@ import characters from './data'
 
 class CharacterList extends React.Component {
     renderCharacters(){
-        return characters.map(elements=>{
-            return  <Row>
-                        <Col></Col>
-                    </Row>
+        return characters.map(element=>{
+            return  <Col className="text-center" xs={12} sm={6} md={4} lg={3}>                     
+                        <Col><img src={element.image}/></Col>
+                        <Col>{element.name}</Col>
+                        <Col>{element.birth_year}</Col>
+                        <Col>{element.birth_planet}</Col>
+                        <Col>{element.gender}</Col>
+                    </Col> 
+                    
         })
     }
     render(){
         return (
             <div>
-                <h1 className="text-center">Character list</h1> 
+                <h1 className="text-center">Character list</h1>
+                <Row>
+                    {this.renderCharacters()}
+                </Row>
             </div>
                     
         );
