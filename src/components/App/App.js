@@ -8,7 +8,8 @@ import allCharactersData from '../data'
 
 class App extends React.Component {
   constructor(props){
-    super(props);       
+    super(props);
+    this.state = { newCharactersData: []}             
     this.state = { allCharactersData: allCharactersData}     
     this.searchResults = this.searchResults.bind(this);        
   } 
@@ -16,20 +17,18 @@ class App extends React.Component {
     console.log(term)
     let newList = []
     this.state.allCharactersData.map(element=>{
-      if((element.name).includes(term)){
+      if(((element.name).toLowerCase()).includes(term.toLowerCase())){
         newList.push(element)
-      }
-      
-    })
-    console.log(newList)    
-    return this.setState({ allCharactersData: newList});  
+      }      
+    })       
+    this.setState({ newCharactersData: newList});        
   } 
   render(){
     return (
       <div>
         <Header />
         <SearchBar search={this.searchResults} />
-        <CharacterList characters={this.state.allCharactersData}/>  
+        <CharacterList characters={this.state.newCharactersData}/>  
       </div>               
     );
   }  
