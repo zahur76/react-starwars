@@ -1,10 +1,10 @@
 import React from 'react';
 import './Header.css';
 
-class Header extends React.Component {  
-  render(){
+class Header extends React.Component { 
+  render(){    
     return (
-      <h1 className="text-center text-warning bg-dark">Starwars</h1>          
+      <h1 className="text-center text-warning logo">STARWARS</h1>          
     );
   }  
 }

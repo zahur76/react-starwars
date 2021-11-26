@@ -13,8 +13,7 @@ class App extends React.Component {
     this.state = { allCharactersData: allCharactersData}     
     this.searchResults = this.searchResults.bind(this);        
   } 
-  searchResults(term){
-    console.log(term)
+  searchResults(term){    
     let newList = []
     this.state.allCharactersData.map(element=>{
       if(((element.name).toLowerCase()).includes(term.toLowerCase())){
@@ -25,7 +24,7 @@ class App extends React.Component {
   } 
   render(){
     return (
-      <div>
+      <div className="content">
         <Header />
         <SearchBar search={this.searchResults} />
         <CharacterList characters={this.state.newCharactersData}/>  

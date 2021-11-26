@@ -4,29 +4,28 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import allCharactersData from '../data'
 
-class CharacterList extends React.Component {    
-    renderCharacters(){
-        console.log(this.props.characters)
+class CharacterList extends React.Component {         
+    renderCharacters(){        
         return (this.props.characters || allCharactersData).map(element=>{
-            return  <Col className="text-center" xs={12} sm={6} md={4} lg={3}>                     
+            return  <Col className="character-details text-center" xs={12} sm={6} md={4} lg={3}>                     
                         <Col><img src={element.image} alt={element.image} /></Col>
-                        <Col>{element.name}</Col>
-                        <Col>{element.birth_year}</Col>
-                        <Col>{element.birth_planet}</Col>
-                        <Col>{element.gender}</Col>
+                        <div className="background mb-3">
+                            <Col>{element.name}</Col>
+                            <Col>{element.gender}</Col>
+                            <Col><b>Birth Year:</b> {element.birth_year}</Col>
+                            <Col><b>irth Planet:</b> {element.birth_planet}</Col>                            
+                        </div>
                     </Col> 
                     
         })
     }
     render(){
         return (
-            <div>
-                <h1 className="text-center">Character list</h1>
-                <Row>
+            <div>                
+                <Row className="mt-3">
                     {this.renderCharacters()}
-                </Row>
-            </div>
-                    
+                </Row>                
+            </div>                    
         );
     }  
 }

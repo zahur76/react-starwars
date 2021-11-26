@@ -12,6 +12,8 @@ import c3po from './images/c3pio.jpg'
 import obi from './images/obi-wan.0.jpg'
 import boba from './images/boba.jpg'
 import maul from './images/darth-maul.jpg'
+import jango from './images/jango.jpg'
+import quigon from './images/Qui-Gon.jpg'
 
 let allCharactersData = [
     {   id: 1,
@@ -111,6 +113,20 @@ let allCharactersData = [
         birth_planet: 'Stewjon',
         gender: 'Male',
         image: obi
+    },
+    {   id: 15,
+        name:'Jango Fett',
+        birth_year: '66BBY',
+        birth_planet: 'Concord Dawn',
+        gender: 'Male',
+        image: jango
+    },
+    {   id: 16,
+        name:'Qui-Gon Jinn',
+        birth_year: '80BBY',
+        birth_planet: 'Coruscant circa',
+        gender: 'Male',
+        image: quigon
     }
 ]
 

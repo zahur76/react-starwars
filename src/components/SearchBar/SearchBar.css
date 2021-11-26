@@ -1,0 +1,9 @@
+.search-bar {
+    border-radius: 15px;      
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: rgb(235, 232, 232);    
+}

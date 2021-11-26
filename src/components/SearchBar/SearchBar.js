@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 
@@ -16,12 +17,9 @@ class SearchBar extends React.Component {
   }
   render(){
     return (
-      <div>     
-        <input onChange={this.handleTermChange} placeholder='search character'/>      
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-        </div>          
+      <Col className="text-center">     
+        <input className="search-bar w-50 mb-3 mt-3" onChange={this.handleTermChange} placeholder='search character'/>
+      </Col>          
     );
   }  
 }
