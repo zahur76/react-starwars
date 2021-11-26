@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
+import SearchBar from '../SearchBar/SearchBar';
 
 class App extends React.Component {  
   render(){
     return (
-      <Header />           
+      <div>
+        <Header />
+        <SearchBar />  
+      </div>               
     );
   }  
 }
