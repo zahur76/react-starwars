@@ -17,7 +17,7 @@ class CharacterList extends React.Component {
     renderCharacters(){
         this.removeModal()        
         return (this.props.characters || allCharactersData).map(element=>{
-            return  <Col className="character-details text-center" xs={12} sm={6} md={4} lg={3}>                     
+            return  <Col key={element.id} className="character-details text-center" xs={12} sm={6} md={4} lg={3}>                     
                         <Col><img src={element.image} alt={element.image} /></Col>
                         <div className="background mb-3">
                             <Col>{element.name}</Col>
