@@ -16,6 +16,19 @@ img {
     color: rgb(207, 207, 207);
 }
 
+.banner {
+    width: 50%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    color: white;
+    font-size: 40px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 10px;    
+}
+
 @media screen and (max-width: 768px){
     img {
         width: 175px;
@@ -41,5 +54,10 @@ img {
 
     .character-details {
         font-size: 14px;
+    }
+
+    .banner {
+        width: 75%;
+        left: 12.5%
     }
 }
